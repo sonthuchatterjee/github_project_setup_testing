@@ -1,0 +1,451 @@
+1) Write a program to iterate the first 10 numbers, and in each iteration, print the sum of the current and previous number.
+
+for i,j in enumerate(range(10)):
+    if i ==0:
+        x=j
+        y=x
+        print(f"current number is {x} Previous number is {y} Sum: {x+y}")
+    else:
+        y=x
+        x=j
+        print(f"current number is {x} Previous number is {y} Sum: {x+y}")
+
+2) Write a program to accept a string from the user and display characters that are present at an even index number
+
+x=input("Please enter the string:")
+print(f"original string is {x}")
+print('Printing only even index chars')
+for i in x:
+    indexpos=x.index(i)
+    if indexpos%2 == 0:
+        print(i)
+
+3) Write a program to check if the given number is a palindrome number.
+
+A palindrome number is a number that is the same after reverse. For example, 545, is the palindrome numbers
+
+x=input("please enter a number:")
+list1=list(x)
+list2=list1[::-1]
+
+print(f"original number is {x}")
+if list1 == list2:
+    print("Yes. given number is palindrome number")
+else:
+    print("No. given number is not a palindrome number")
+
+4) Write a Program to extract each digit from an integer in the reverse order.
+For example, If the given int is 7536, the output shall be “6 3 5 7“, with a space separating the digits.
+
+x=input("please enter a number:")
+revlist = list(x)[::-1]
+print(" ".join(i for i in revlist))
+    
+
+5) Calculate income tax for the given income by adhering to the rules below
+Taxable Income	Rate (in %)
+First $10,000	0
+Next $10,000	10
+The remaining	20
+Expected Output:
+
+For example, suppose the taxable income is 45000, and the income tax payable is
+
+10000*0% + 10000*10%  + 25000*20% = $6000
+
+x=input("What is the Income:")
+step=int(x)//10000
+if step <3:
+    stepp=step
+else:
+    stepp=3
+
+i=1
+while i <= stepp:
+    
+    
+    if i == 1:
+        
+        tax = 10000 * (((i-1) * 10)/100)
+        sumtax=tax
+    elif i == 2:
+        tax = 10000 * (((i-1) * 10)/100)
+        sumtax+=tax
+    else:
+        tax = (int(x) - 20000) * (((i-1) * 10)/100)
+        sumtax+=tax
+    i+=1
+
+print("the Total tax is :",sumtax)
+
+6) Print multiplication table from 1 to 10
+
+for i in range(1,11):
+    for j in range(1,11):
+        print(i * j,end=" ")
+    print(sep="/n")
+7) Print a downward Half-Pyramid Pattern of Star (asterisk)
+* * * * *  
+* * * *  
+* * *  
+* *  
+*
+for i in range(5,0,-1):
+    for j in range(i,0,-1):
+        print("*",end=" ")
+    print(end="\n")
+
+8) Write a function called exponent(base, exp) that returns an int value of base raises to the power of exp.
+Note here exp is a non-negative integer, and the base is an integer.
+
+def exponent(base,exp):
+    num=base
+    sum=1
+    for i in range(exp):
+        sum=sum*base
+    return print(f"{num} raises to the power of {exp}: {sum}")
+
+exponent(5,4)   
+
+9) Print First 10 natural numbers using while loop
+
+i=1
+while i <= 10:
+    print(i)
+    i+=1
+
+10) Display numbers from a list using loop
+
+Write a program to display only those numbers from a list that satisfy the following conditions
+
+The number must be divisible by five
+If the number is greater than 150, then skip it and move to the next number
+If the number is greater than 500, then stop the loop
+
+numbers = [12, 75, 150, 180, 145, 525, 50]
+for i in numbers:
+    if i%5 == 0:
+        if i > 150:
+            if i > 500:
+                break
+            continue
+        print(i)
+
+11) Write a program to display all prime numbers within a range
+Note: A Prime Number is a number that cannot be made by multiplying other whole numbers. A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
+
+Examples:
+
+6 is not a prime mumber because it can be made by 2×3 = 6
+37 is a prime number because no other whole numbers multiply together to make it.
+
+for i in range(25+1,50):
+    for j in range(2,11):
+        if i%j ==0:
+            divisibl = i
+            break
+    else:
+        print(str(i) +" is the prime number")
+            
+
+12) Display Fibonacci series up to 10 terms
+The Fibonacci Sequence is a series of numbers. The next number is found by adding up the two numbers before it. The first two numbers are 0 and 1.
+
+For example, 0, 1, 1, 2, 3, 5, 8, 13, 21. The next number in this series above is 13+21 = 34.
+
+
+ Learn Python
+ 
+ Exercises
+ 
+ Quizzes
+ 
+ Code Editor
+Search this website
+Home » Python Exercises » Python if else, for loop, and range() Exercises with Solutions
+Python if else, for loop, and range() Exercises with Solutions
+Updated on: September 6, 2021 | 296 Comments
+
+To decide and control the flow of a program, we have branching and looping techniques in Python. A good understanding of loops and if-else statements is necessary to write efficient programs in Python.
+
+This Python loop exercise aims to help Python developers to learn and practice if-else conditions, for loop, range() function, and while loop.
+
+Use the following tutorials to solve this exercise
+
+Control flow statements: Use the if-else statements in Python for conditional decision-making
+for loop: To iterate over a sequence of elements such as list, string.
+range() function: Using a for loop with range(), we can repeat an action a specific number of times
+while loop: To repeat a block of code repeatedly, as long as the condition is true.
+Break and Continue: To alter the loop’s execution in a certain manner.
+Nested loop: loop inside a loop is known as a nested loop
+
+Also Read:
+
+Python Loop Quiz
+This Python loop exercise include the following: –
+
+It contains 18 programs to solve using if-else statements and looping techniques.
+Solutions are provided for all questions and tested on Python 3.
+This exercise is nothing but an assignment to solve, where you can solve and practice different loop programs and challenges.
+
+Let us know if you have any alternative solutions. It will help other developers.
+
+Use Online Code Editor to solve exercise questions.
+
+Table of contents
+Exercise 1: Print First 10 natural numbers using while loop
+Exercise 2: Print the following pattern
+Exercise 3: Calculate the sum of all numbers from 1 to a given number
+Exercise 4: Write a program to print multiplication table of a given number
+Exercise 5: Display numbers from a list using loop
+Exercise 6: Count the total number of digits in a number
+Exercise 7: Print the following pattern
+Exercise 8: Print list in reverse order using a loop
+Exercise 9: Display numbers from -10 to -1 using for loop
+Exercise 10: Use else block to display a message “Done” after successful execution of for loop
+Exercise 11: Write a program to display all prime numbers within a range
+Exercise 12: Display Fibonacci series up to 10 terms
+Exercise 13: Find the factorial of a given number
+Exercise 14: Reverse a given integer number
+Exercise 15: Use a loop to display elements from a given list present at odd index positions
+Exercise 16: Calculate the cube of all numbers from 1 to a given number
+Exercise 17: Find the sum of the series upto n terms
+Exercise 18: Print the following pattern
+
+Exercise 1: Print First 10 natural numbers using while loop
+Help: while loop in Python
+
+Expected output:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Show Solution
+Exercise 2: Print the following pattern
+Write a program to print the following number pattern using a loop.
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+
+Refer:
+
+Print Patterns In Python
+Nested loops in Python
+Show Hint
+Show Solution
+Exercise 3: Calculate the sum of all numbers from 1 to a given number
+Write a program to accept a number from a user and calculate the sum of all numbers from 1 to a given number
+
+For example, if the user entered 10 the output should be 55 (1+2+3+4+5+6+7+8+9+10)
+
+Expected Output:
+
+Enter number 10
+Sum is:  55
+Refer:
+
+Accept input from user in Python
+Calculate sum and average in Python
+
+Show Hint
+Show Solution
+Exercise 4: Write a program to print multiplication table of a given number
+For example, num = 2 so the output should be
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Show Hint
+Show Solution
+Exercise 5: Display numbers from a list using loop
+Write a program to display only those numbers from a list that satisfy the following conditions
+
+The number must be divisible by five
+If the number is greater than 150, then skip it and move to the next number
+If the number is greater than 500, then stop the loop
+Given:
+
+numbers = [12, 75, 150, 180, 145, 525, 50]
+Expected output:
+
+75
+150
+145
+Refer: break and continue in Python
+
+Show Hint
+Show Solution
+Exercise 6: Count the total number of digits in a number
+Write a program to count the total number of digits in a number using a while loop.
+
+For example, the number is 75869, so the output should be 5.
+
+Show Hint
+Show Solution
+Exercise 7: Print the following pattern
+Write a program to use for loop to print the following reverse number pattern
+
+5 4 3 2 1 
+4 3 2 1 
+3 2 1 
+2 1 
+1
+Refer: Print patterns in Python
+
+Show Hint
+Show Solution
+Exercise 8: Print list in reverse order using a loop
+Given:
+
+list1 = [10, 20, 30, 40, 50]
+Expected output:
+
+50
+40
+30
+20
+10
+Show Hint
+Show Solution
+Exercise 9: Display numbers from -10 to -1 using for loop
+Expected output:
+
+-10
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+-2
+-1
+See: Reverse range
+
+Show Solution
+Exercise 10: Use else block to display a message “Done” after successful execution of for loop
+For example, the following loop will execute without any error.
+
+Given:
+
+for i in range(5):
+    print(i)
+Expected output:
+
+0
+1
+2
+3
+4
+Done!
+Show Hint
+Show Solution
+Exercise 11: Write a program to display all prime numbers within a range
+Note: A Prime Number is a number that cannot be made by multiplying other whole numbers. A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers
+
+Examples:
+
+6 is not a prime mumber because it can be made by 2×3 = 6
+37 is a prime number because no other whole numbers multiply together to make it.
+Given:
+
+# range
+start = 25
+end = 50
+Expected output:
+
+Prime numbers between 25 and 50 are:
+29
+31
+37
+41
+43
+47
+
+Show Solution
+Exercise 12: Display Fibonacci series up to 10 terms
+The Fibonacci Sequence is a series of numbers. The next number is found by adding up the two numbers before it. The first two numbers are 0 and 1.
+
+For example, 0, 1, 1, 2, 3, 5, 8, 13, 21. The next number in this series above is 13+21 = 34.
+
+
+Fibonacci sequence:
+0  1  1  2  3  5  8  13  21  34
+
+# first two numbers
+num1, num2 = 0, 1
+
+print("Fibonacci sequence:")
+# run loop 10 times
+for i in range(10):
+    # print next number of a series
+    print(num1, end="  ")
+    # add last two numbers to get next number
+    res = num1 + num2
+
+    # update values
+    num1 = num2
+    num2 = res
+
+my solution - 
+
+for i in range(10):
+    if i == 0:
+        x=i
+        print(x)
+    elif i ==1:
+        y=i
+        print(y)
+    else:
+        summ=x+y
+        x=y
+        y=summ
+        print(y)
+
+13) Find the factorial of a given number
+
+factorial_number=5
+for i,j in enumerate(range(factorial_number,1,-1)):
+    if i ==0:
+        prod=j*(j-1)
+    else:
+        prod = prod * (j-1)
+print(prod)
+
+14) Write a program to print the following start pattern using the for loop
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+
+for i in range(5):
+    for j in range(i+1):
+        print('*',end=" ")
+    print(end="\n")
+for i in reversed(range(4)):
+    for j in range(i+1):
+        print('*',end=" ")
+    print(end="\n")
